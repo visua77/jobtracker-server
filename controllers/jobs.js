@@ -25,7 +25,7 @@ export const postJobs = async(req,res)=> {
         const savedJob = await newJob.save()
         res.json(savedJob)
     }catch (error){
-            res.status(404).json({message:error.message})
+            res.status(404).json({msg:error.message})
     } 
 }
 
