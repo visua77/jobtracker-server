@@ -8,7 +8,7 @@ export const getUsers = async (req,res)=> {
         res.status(200).json(users)
     }
     catch (error){
-        res.status(404).json({message:error.message})
+        res.status(404).json({msg:error.message})
         
     }
 }
