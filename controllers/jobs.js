@@ -68,3 +68,11 @@ export const updateJob = async (req, res)=> {
     const updatedJob = await Job.findByIdAndUpdate(_id,jobPost, {new:true} )
     res.json(updatedJob)
 }
+
+
+const seedDB = async() => {
+    //Deletes every post in the user-db
+    await Job.deleteMany()
+}
+
+seedDB()
