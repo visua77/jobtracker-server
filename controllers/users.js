@@ -99,9 +99,11 @@ export const loggingIn = async (req, res)=> {
 
 export const deleteUser = async (req,res)=> {
    try{
-       const deletedUser = await PostUser.findByIdAndDelete(req.user)
+
        const jobs = await Job.find({userId:req.user})
        await jobs.deleteMany()
+       const deletedUser = await PostUser.findByIdAndDelete(req.user)
+       
        res.json(deletedUser)
    }catch (err) {
        res.status(500).json({error: err.message})
