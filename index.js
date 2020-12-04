@@ -5,6 +5,7 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import authRoute from './routes/auth.js'
 import jobsRoute from './routes/jobs.js'
+import Job from '../models/jobs.js'
 dotenv.config()
 
 const app = express()
