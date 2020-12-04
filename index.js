@@ -26,12 +26,7 @@ mongoose.connect(process.env.CONNECT_DB, {useNewUrlParser:true, useUnifiedTopolo
 mongoose.set('useFindAndModify',false)
 
 
-const seedDB = async() => {
-    //Deletes every post in the user-db
-    await Job.deleteMany()
-}
 
-//seedDB()
 
 
 

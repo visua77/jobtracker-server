@@ -1,4 +1,5 @@
 import PostUser from '../models/user.js'
+import Job from '../models/jobs.js'
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 
@@ -139,9 +140,3 @@ export const getUser = async (req, res)=> {
 }
 
 
-const seedDB = async() => {
-    //Deletes every post in the user-db
-    await PostUser.deleteMany()
-}
-
-//seedDB()
