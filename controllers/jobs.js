@@ -70,9 +70,4 @@ export const updateJob = async (req, res)=> {
 }
 
 
-const seedDB = async() => {
-    //Deletes every post in the user-db
-    await Job.deleteMany()
-}
 
-seedDB()
