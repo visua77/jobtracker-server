@@ -31,7 +31,7 @@ const seedDB = async() => {
     await Job.deleteMany()
 }
 
-seedDB()
+//seedDB()
 
 
 

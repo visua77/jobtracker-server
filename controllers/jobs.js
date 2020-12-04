@@ -68,6 +68,3 @@ export const updateJob = async (req, res)=> {
     const updatedJob = await Job.findByIdAndUpdate(_id,jobPost, {new:true} )
     res.json(updatedJob)
 }
-
-
-
