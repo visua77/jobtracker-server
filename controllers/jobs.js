@@ -19,7 +19,8 @@ export const postJobs = async(req,res)=> {
         const newJob = new Job({
             title, 
             description,
-            status, 
+            status,
+            note,  
             userId: req.user
         })
         const savedJob = await newJob.save()
