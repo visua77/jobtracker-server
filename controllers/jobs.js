@@ -5,7 +5,7 @@ import Job from '../models/jobs.js'
 export const postJobs = async(req,res)=> {
     
      try{
-        const {title, description, status} = req.body
+        const {title, description, status, note} = req.body
         //validation
         if(!title){
             res.status(400).json({msg: "Not all fields has been entered."})
